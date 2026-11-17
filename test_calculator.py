@@ -19,12 +19,12 @@ class TestCalculator(unittest.TestCase):
 
     ######## Partner 1
 
-    def test_multiply(self):
+    def test_mul(self):
         self.assertEqual(mul(3, 4), 12)
         self.assertEqual(mul(-2, 5), -10)
         self.assertEqual(mul(0, 7), 0)
 
-    def test_divide(self):
+    def test_div(self):
         self.assertEqual(div(2, 10), 5)
         self.assertEqual(div(4, 20), 5)
         self.assertAlmostEqual(div(3, 10), 10 / 3)
@@ -39,6 +39,9 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(logarithm(2, 4), 2)
         self.assertEqual(logarithm(2, 0.5), -1)
         self.assertEqual(logarithm(3, 27), 3)
+
+    def exp(a, b):
+        return a ** b
 
     def test_log_invalid_base(self):
         with self.assertRaises(ValueError):
